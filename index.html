@@ -172,6 +172,36 @@ Stos technologii Waves może przynieść korzyści w każdym przypadku użycia, 
                     <div class="tm-flex-center col-xs-12 col-sm-6 col-md-6 col-lg-5 col-xl-6">
                         <img src="https://th.bing.com/th/id/OIP.KZNCtSga2bxs9lrZzIMaMAHaEt?pid=ImgDet&rs=1" alt="Image" class="img-fluid tm-img">
                     </div>
+                                    
+                   </section> <!-- #home -->
+
+                <!-- #services -->
+                <section id="tm-section-2" class="row tm-section">
+       
+                    <div class="tm-white-curve-right col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
+                        
+                        <div class="tm-white-curve-right-circle"></div>
+                        <div class="tm-white-curve-right-rec"></div>
+                        
+                            <div>
+        <label>Jaką kryptowalutę chcesz przeliczyć?
+        <select id="krypto">
+            <option value="btc">Bitcoin</option>
+            <option value="eth">Ethereum</option>
+            <option value="waves">Waves</option>
+        </select>
+        </label>
+        <br>
+        <label>Ile?
+        <input id="ile" type="number">
+        </label>
+        <br>
+        <button id="button" type="button">Przelicz na PLN!</button>
+        <div id="message"></div>
+        <br>
+    </div>
+   
+                    </div>
                     
                 </section> <!-- #home -->
 
@@ -271,7 +301,32 @@ Stos technologii Waves może przynieść korzyści w każdym przypadku użycia, 
             
         });
     
-        </script>             
+        </script>  
+         <script>
+  // Step 1: Find the element we want the event on
+  var button = document.getElementById("button");
+  // Step 2: Define the event listener function
+     
+  var onButtonClick = function() {
+    var ile = document.getElementById("ile").value;
+    var krypto = document.getElementById("krypto").value;
+    var przeliczenie;
+    var wartosc;
+    if (krypto === "btc") {
+        wartosc = 171825,2226*ile;
+        przeliczenie = ile + " BTC to " + wartosc + " PLN,   ";
+    } else if (krypto === "eth") {
+        wartosc = 13065,6376*ile;
+        przeliczenie = ile + " ETH to " + wartosc + " PLN,   ";
+    } else {
+        wartosc = 92,2455*ile;
+        przeliczenie = ile + " WAVES to " + wartosc + " PLN,   ";
+    }
+    document.getElementById("message").textContent += przeliczenie;  
+  };
+  // Step 3: Attach event listener to element
+  button.addEventListener("click", onButtonClick);
+  </script>
 
     </body>
     </html>
