@@ -181,13 +181,12 @@ Stos technologii Waves może przynieść korzyści w każdym przypadku użycia, 
                     <div class="tm-white-curve-right col-xs-12 col-sm-6 col-md-6 col-lg-7 col-xl-6">
                         
                         
-                            <div>
-        <label>Ile crypto masz na dysku z 2k13?
+                           <div>
+        <label>Ile crypto masz na pendrive z 2k13?
         <select id="krypto">
-            <option value="btc">BTC</option>
+            <option value="btc">Bitcoin</option>
             <option value="eth">Ethereum</option>
             <option value="waves">Waves</option>
-            <option value="celo">celo</option>
         </select>
         </label>
         <br>
@@ -301,7 +300,7 @@ Stos technologii Waves może przynieść korzyści w każdym przypadku użycia, 
         });
     
         </script>  
-         <script>
+        <script>
   // Step 1: Find the element we want the event on
   var button = document.getElementById("button");
   // Step 2: Define the event listener function
@@ -312,18 +311,13 @@ Stos technologii Waves może przynieść korzyści w każdym przypadku użycia, 
     var przeliczenie;
     var wartosc;
     if (krypto === "btc") {
-        wartosc = 171825.2226*ile;
+        wartosc = 171825,2226*ile;
         przeliczenie = ile + " BTC to " + wartosc + " PLN,   ";
     } else if (krypto === "eth") {
-        wartosc = 13065.6376*ile;
+        wartosc = 13065,6376*ile;
         przeliczenie = ile + " ETH to " + wartosc + " PLN,   ";
-        
-        } else if (krypto === "celo") {
-        wartosc = 13.7656376*ile;
-        przeliczenie = ile + " celo to " + wartosc + " PLN,   ";
-            
-    } else if (krypto === "waves) {
-        wartosc = 92.2455*ile;
+    } else {
+        wartosc = 92,2455*ile;
         przeliczenie = ile + " WAVES to " + wartosc + " PLN,   ";
     }
     document.getElementById("message").textContent += przeliczenie;  
