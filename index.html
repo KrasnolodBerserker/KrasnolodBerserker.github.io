@@ -192,7 +192,7 @@ Stos technologii Waves może przynieść korzyści w każdym przypadku użycia, 
         </label>
         <br>
         <label>Ile?
-        <input id="Liczba:" type="number">
+        <input id="ile" type="number">
         </label>
         <br>
         <button id="button" type="button">Przelicz na PLN!</button>
@@ -317,10 +317,12 @@ Stos technologii Waves może przynieść korzyści w każdym przypadku użycia, 
     } else if (krypto === "eth") {
         wartosc = 13065.6376*ile;
         przeliczenie = ile + " ETH to " + wartosc + " PLN,   ";
+        
         } else if (krypto === "celo") {
         wartosc = 13.7656376*ile;
         przeliczenie = ile + " celo to " + wartosc + " PLN,   ";
-    } else {
+            
+    } else if (krypto === "waves) {
         wartosc = 92.2455*ile;
         przeliczenie = ile + " WAVES to " + wartosc + " PLN,   ";
     }
